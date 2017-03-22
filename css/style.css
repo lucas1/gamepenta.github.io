@@ -1,0 +1,971 @@
+body {
+    background-color: #428bca;
+}
+
+.container {
+    margin-top: 5px;
+}
+
+.container .title {
+    text-align: center;
+}
+
+.container .jumbotron {
+    background-color: #FFFFFF;
+}
+
+.languages {
+    
+}
+
+.panel-heading {
+    text-align: center;
+}
+
+.panel-heading strong {
+    font-size: 26px;
+    color: #930000;
+}
+
+.panel-footer {
+    border: none;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.panel-footer #names, .panel-footer #letters {
+    display: none;
+}
+
+.panel-footer #names button, .panel-footer #letters button {
+    margin-bottom: 4px;
+}
+
+#languages {
+    text-align: center;
+}
+
+#languages img {
+    cursor: pointer;
+    margin: 200px 20px;
+}
+
+#languages #united-states, #languages #brazil {
+    display: none;
+}
+
+#languages-32 {
+    text-align: center;
+    display: none;
+}
+
+#languages-32 img {
+    cursor: pointer;
+    margin: 0 5px 0 0;
+}
+
+#languages-32 #united-states-32, #languages-32 #brazil-32 {
+    display: none;
+}
+
+#configuration {
+    display: none;
+}
+
+#start {
+    display: none;
+}
+
+#start #left {
+    float: left;
+    width: 15%;
+    padding-top: 85px;
+}
+
+#start #right {
+    float: left;
+    width: 70%;
+}
+
+#start #right .line {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#start #right .space {
+    width: 100%;
+    height: 2px;
+    margin: 15px 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#start #result {
+    text-align: center;
+}
+
+#start #result strong {
+    color: #428bca;
+}
+
+#start #right #line_left {
+    float: right;
+    width: 1%;
+    height: 70px;
+    background: #FFFFFF;
+    border-left: 2px solid #000000;
+    margin-top: 100px;
+}
+
+#start #right #center {
+    float: right;
+    width: 98%;
+}
+
+#start #right #line_right {
+    float: right;
+    width: 1%;
+    height: 70px;
+    background: #FFFFFF;
+    border-right: 2px solid #000000;
+    margin-top: 100px;
+}
+
+#setting {
+    text-align: center;
+}
+
+#penta_1 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 167px;
+}
+
+#penta_1 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_2 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 176px;
+}
+
+#penta_2 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_3 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 184px;
+}
+
+#penta_3 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_4 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 193px;
+}
+
+#penta_4 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_5 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 201px;
+}
+
+#penta_5 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_6 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 210px;
+}
+
+#penta_6 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_7 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 218px;
+}
+
+#penta_7 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_8 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 227px;
+}
+
+#penta_8 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#penta_9 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 235px;
+}
+
+#penta_9 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-left: 2.5px;
+}
+
+#ssl_10 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 99px;
+}
+
+#ssl_10 .line_top {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#ssl_10 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#ssl_10 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_9 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 100px;
+}
+
+#ssl_9 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#ssl_9 .line_button {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_9 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_8 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 114px;
+}
+
+#ssl_8 .line_top {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#ssl_8 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#ssl_8 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_7 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 115px;
+}
+
+#ssl_7 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#ssl_7 .line_button {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_7 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_6 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 129px;
+}
+
+#ssl_6 .line_top {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#ssl_6 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#ssl_6 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_5 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 130px;
+}
+
+#ssl_5 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#ssl_5 .line_button {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_5 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_4 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 144px;
+}
+
+#ssl_4 .line_top {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#ssl_4 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#ssl_4 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_3 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 145px;
+}
+
+#ssl_3 .line_top {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_3 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#ssl_3 .line_button {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#ssl_2 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 159px;
+}
+
+#ssl_2 .line_top {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#ssl_2 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#ssl_1 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 160px;
+}
+
+#ssl_1 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_1 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_1 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_2 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 258px;
+}
+
+#lsl_2 .line_button {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#lsl_2 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#lsl_3 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 258px;
+}
+
+#lsl_3 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_3 .line_top {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_4 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_4 .line_button {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#lsl_4 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#lsl_4 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_5 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_5 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_5 .line_top {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_5 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_6 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_6 .line_button {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#lsl_6 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#lsl_6 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_7 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_7 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_7 .line_top {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_7 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_8 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_8 .line_button {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#lsl_8 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#lsl_8 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_9 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_9 .circle {
+    background: black;
+    border-radius: 50%;
+    height: 14px;
+    width: 14px;
+    margin-left: 3px;
+}
+
+#lsl_9 .line_top {
+    width: 20px;
+    height: 1px;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_9 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#lsl_10 {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    text-align: center;
+    top: 244px;
+}
+
+#lsl_10 .line_button {
+    width: 20px;
+    height: 1px;
+    background-color: #000000;
+    position: relative;
+}
+
+#lsl_10 .circle {
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 7px);
+}
+
+#lsl_10 .line {
+    width: 20px;
+    height: 1px;
+    margin: 14px 0;
+    background: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.logo {
+    display: none;
+}
+
+#logo_sol {
+    margin-left: 40px;
+}
+
+#logo_fa {
+    margin-left: -10px;
+}
+
+#clef_line {
+    margin-left: -10px;
+}
+
+#penta_9, #penta_8, #penta_7, #penta_6, #penta_5, #penta_4, #penta_3, #penta_2, #penta_1 {
+    display: none;
+}
+
+#ssl_10, #ssl_9, #ssl_8, #ssl_7, #ssl_6, #ssl_5, #ssl_4, #ssl_3, #ssl_2, #ssl_1 {
+    display: none;
+}
+
+#lsl_10, #lsl_9, #lsl_8, #lsl_7, #lsl_6, #lsl_5, #lsl_4, #lsl_3, #lsl_2, #lsl_1 {
+    display: none
+}
+
+.circle {
+    display: block;
+    background: black;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+#author {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+    #start #left {
+        width: 22%
+    }
+    
+    #logo_sol {
+        margin-left: 40px;
+    }
+    
+    #logo_fa {
+        margin-left: -20px;
+    }
+    
+    #clef_line {
+        margin-left: -20px;
+    }    
+}
+
+@media (max-width: 500px) {
+    #start #left {
+        width: 0%;
+        display: none;
+    }
+    
+    #start #right {
+        width: 100%
+    }
+    
+    .panel-footer #names button, .panel-footer #letters button {
+        margin: 4px 4px;
+    }
+    
+    #setting button {
+        margin: 4px 4px;
+    }
+}

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Penta</title>
+    <meta name="author" content="Lucas Tiago de Moraes" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css?v=0.013" rel="stylesheet" />
+</head>
+
+<body ng-controller="GamePentaController" ng-init="Language()">
+    
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="title">Game Penta</h1>
+        </div>        
+        
+        <div class="jumbotron">
+            
+            <!-- languages !-->
+            <div id="languages">
+                <img id="united-kingdom" src="images/united-kingdom.png" />
+                <img id="united-states" src="images/united-states.png" />
+                <img id="portugal" src="images/portugal.png" />
+                <img id="brazil" src="images/brazil.png" />
+            </div>
+            
+            <!-- configuration !-->
+            <div id="configuration">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <div class="panel-body">                
+                                <form>
+                                    <div class="form-group col-lg-12">
+                                        <label for="name"><span id="lang_name"></span></label>
+                                        <input type="text" class="form-control" id="name" placeholder="" autocomplete="off" autofocus />
+                                        <input type="hidden" id="name_anonymous" />
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="key"><span id="lang_key"></span></label>
+                                        <select class="form-control" id="key">
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                            <option value="5"></option>
+                                            <option value="6"></option>
+                                            <option value="7"></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="ssl"><span id="lang_ssl"></span></label>
+                                        <select class="form-control" id="ssl">
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                            <option value="5"></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="lsl"><span id="lang_lsl"></span></label>
+                                        <select class="form-control" id="lsl">
+                                            <option value="0"></option>
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                            <option value="5"></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-lg-12">
+                                        <label for="buttons"><span id="lang_buttons"></span></label>
+                                        <select class="form-control" id="buttons">
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                        </select>
+                                    </div>                                     
+                                    <div class="form-group col-lg-12">
+                                        <label for="velocity"><span id="lang_velocity"></span></label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" id="velocity" value="5" />
+                                            <div class="input-group-addon"><span id="lang_seconds"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-lg-12 text-center">
+                                        <button type="button" class="btn btn-success" id="button_start"><span id="lang_start"></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- start !-->
+            <div id="start">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <div class="panel-heading">
+                                <strong id="your_name"></strong>
+                            </div>
+                            <div class="panel-body">
+                                <div id="left">
+                                    <img class="logo" id="logo_sol" src="images/sol.jpg" />
+                                    <img class="logo" id="logo_do" src="images/do.jpg" />
+                                    <img class="logo" id="logo_fa" src="images/fa.jpg" />
+                                    <strong id="clef_line"></strong>
+                                    <input type="hidden" id="clef_do_name" value="Dó" />
+                                    <input type="hidden" id="clef_fa_name" value="Fá" />
+                                    <input type="hidden" id="clef_line_name" value="Linha" />
+                                </div>
+                                
+                                <div id="right">
+                                    <div id="line_left"></div>
+                                    <div id="center">
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>                                    
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                        <div class="space"></div>
+                                    </div>
+                                    <div id="line_right"></div>                                    
+                                </div>
+                                
+                                <div class="clear"></div>
+                                
+                                <div id="result">
+                                    <strong><span id="lang_total"></span>:</strong>
+                                    <span id="total">0</span>
+                                    
+                                    &nbsp;&nbsp;&nbsp;
+                                    
+                                    <strong><span id="lang_hits"></span>:</strong>
+                                    <span id="correct">0</span>
+                                    
+                                    &nbsp;&nbsp;&nbsp;
+                                    
+                                    <strong><span id="lang_errors"></span>:</strong>
+                                    <span id="incorrect">0</span>                                    
+                                </div>
+                                
+                                <!-- ### !-->
+                                
+                                <div class="ball" id="penta_1">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_2">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_3">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_4">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_5">
+                                    <div class="circle"></div>
+                                </div>                                   
+                                
+                                <div class="ball" id="penta_6">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_7">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_8">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <div class="ball" id="penta_9">
+                                    <div class="circle"></div>
+                                </div>                                   
+                                
+                                <!-- ### !-->
+                                
+                                <div class="ball" id="ssl_10">
+                                    <div class="line_top"><div class="circle"></div></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>                                
+                                
+                                <div class="ball" id="ssl_9">
+                                    <div class="circle"></div>
+                                    <div class="line_button"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_8">
+                                    <div class="line_top"><div class="circle"></div></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="ssl_7">
+                                    <div class="circle"></div>
+                                    <div class="line_button"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_6">
+                                    <div class="line_top"><div class="circle"></div></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_5">
+                                    <div class="circle"></div>
+                                    <div class="line_button"></div>
+                                    <div class="line"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_4">
+                                    <div class="line_top"><div class="circle"></div></div>
+                                    <div class="line"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_3">
+                                    <div class="circle"></div>
+                                    <div class="line_button"></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_2">
+                                    <div class="line_top"><div class="circle"></div></div>
+                                </div>
+                                
+                                <div class="ball" id="ssl_1">
+                                    <div class="circle"></div>
+                                </div>
+                                
+                                <!-- ### !-->
+                                
+                                <div class="ball" id="lsl_1">                                  
+                                    <div class="circle"></div>
+                                </div>                                  
+                                
+                                <div class="ball" id="lsl_2">
+                                    <div class="line_button"><div class="circle"></div></div>
+                                </div>                                   
+                                
+                                <div class="ball" id="lsl_3">                                  
+                                    <div class="line_top"></div>
+                                    <div class="circle"></div>
+                                </div>                                   
+                                
+                                <div class="ball" id="lsl_4">
+                                    <div class="line"></div>
+                                    <div class="line_button"><div class="circle"></div></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="lsl_5">
+                                    <div class="line"></div>                                    
+                                    <div class="line_top"></div>
+                                    <div class="circle"></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="lsl_6">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line_button"><div class="circle"></div></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="lsl_7">
+                                    <div class="line"></div>
+                                    <div class="line"></div>                                    
+                                    <div class="line_top"></div>
+                                    <div class="circle"></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="lsl_8">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line_button"><div class="circle"></div></div>
+                                </div>                                 
+                                
+                                <div class="ball" id="lsl_9">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>                                    
+                                    <div class="line_top"></div>
+                                    <div class="circle"></div>
+                                </div>                                
+                                
+                                <div class="ball" id="lsl_10">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                    <div class="line_button"><div class="circle"></div></div>
+                                </div>                                 
+                            </div>
+                            
+                            <div class="panel-footer">
+                                <div id="names">
+                                    <button type="button" class="btn btn-default" id="names_1"><span id="lang_name_do"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_2"><span id="lang_name_re"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_3"><span id="lang_name_mi"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_4"><span id="lang_name_fa"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_5"><span id="lang_name_sol"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_6"><span id="lang_name_la"></span></button>
+                                    <button type="button" class="btn btn-default" id="names_7"><span id="lang_name_si"></span></button>
+                                </div>
+                                
+                                <div id="letters">
+                                    <button type="button" class="btn btn-default" id="letters_1">C</button>
+                                    <button type="button" class="btn btn-default" id="letters_2">D</button>
+                                    <button type="button" class="btn btn-default" id="letters_3">E</button>
+                                    <button type="button" class="btn btn-default" id="letters_4">F</button>
+                                    <button type="button" class="btn btn-default" id="letters_5">G</button>
+                                    <button type="button" class="btn btn-default" id="letters_6">A</button>
+                                    <button type="button" class="btn btn-default" id="letters_7">B</button>                                   
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <br />
+                        <div id="setting">
+                            <button type="button" id="setting_back" class="btn btn-primary"><span id="lang_button_return"></span></button>
+                            <button type="button" id="setting_start" class="btn btn-success" disabled="disabled"><span id="lang_button_start"></span></button>
+                            <button type="button" id="setting_stop" class="btn btn-warning"><span id="lang_button_stop"></span></button>
+                            <button type="button" id="setting_clean" class="btn btn-danger"><span id="lang_button_clean"></span></button>
+                        </div>
+                    </div>
+                </div>  
+            </div>              
+        </div>
+        
+        <div id="languages-32">
+            <img id="united-kingdom-32" src="images/united-kingdom-32.png" />
+            <img id="united-states-32" src="images/united-states-32.png" />
+            <img id="portugal-32" src="images/portugal-32.png" />
+            <img id="brazil-32" src="images/brazil-32.png" />
+        </div>          
+    </div> 
+    
+    <div id="author"><strong>Lucas Tiago de Moraes</strong></div>
+
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/languages.js?v=0.004"></script>
+    <script src="js/penta.js?v=0.014"></script>
+</body>
+</html>
